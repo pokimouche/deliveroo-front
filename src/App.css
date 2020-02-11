@@ -1,38 +1,263 @@
-.App {
-  text-align: center;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f3f5f5;
+}
+header {
+  background-color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-top: 9.6px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 26.7px;
+  color: #2e3333;
+  margin-bottom: 32px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #2e3333;
+  margin: 20px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h3 {
+  font-size: 18px;
+  line-height: 20px;
+  color: #2e3333;
+  margin-bottom: 8px;
+}
+
+.header-description {
+  color: #868a8a;
+  font-size: 19px;
+  line-height: 28.8px;
+}
+.logo {
+  height: 42px;
+}
+.top-header {
+  height: 60px;
+  border-bottom: 1px solid #e9ebeb;
+}
+
+.top-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container {
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+.bottom-header {
+  display: flex;
+}
+.bottom-info-header {
+  padding: 30px 0px;
+  display: flex;
+}
+
+.bottom-right-header img {
+  width: 350px;
+  border-radius: 5px;
+}
+.bottom-left-header {
+  margin-right: 30px;
+}
+.meals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.meals li {
+  border-radius: 5px;
+  height: 160px;
+  background: #fff;
+  width: calc(50% - 10px);
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.card-wrapper {
+  padding: 15px;
+  display: flex;
+}
+
+.meals li:hover {
+  box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
+}
+
+.card-left {
+  margin-right: 15px;
+  flex: 1;
+}
+
+.card-right {
+  height: 130px;
+  width: 130px;
+}
+.card-right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.meal-description {
+  font-size: 14px;
+  line-height: 20.8px;
+  color: #808484;
+  height: 41px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 16px;
+}
+
+div.cart {
+  width: 350px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+.cart-card {
+  box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
+  background: #fff;
+  border-radius: 4px;
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  margin: 30px 0;
+}
+.cart-btn {
+  display: block;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 16px;
+  background: #00cdbd;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cart-btn.cart-disabled {
+  cursor: not-allowed;
+  background: #bac3c3;
+  color: #8b9a9b;
+  font-weight: bold;
+}
+
+.center-main {
+  margin: 0 auto;
+  width: 96vw;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.category {
+  flex: 1;
+
+  margin-right: 30px;
+}
+
+.card-infos {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-price {
+  font-size: 17px;
+  color: #808484;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-popular {
+  color: #ff8000;
+  font-size: 14px;
+  margin-left: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-popular span {
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+.cart-card {
+  background-color: #fff;
+  margin: 30px 0;
+}
+
+.cart-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0px;
+  color: #2e3333;
+}
+
+.card-empty {
+  color: #868a8a;
+  text-align: center;
+  padding: 48px 0;
+  font-size: 16px;
+}
+
+.cart-items {
+  border-bottom: 1px solid #d1d7d7;
+  margin: 0 10px;
+}
+
+.cart-item-name {
+  flex: 1;
+}
+
+.cart-counter {
+  margin-right: 10px;
+}
+
+.increment-quantity,
+.decrement-quantity {
+  color: #00cdbd;
+  cursor: pointer;
+}
+
+.counter {
+  width: 20px;
+  text-align: center;
+  display: inline-block;
+  color: #808484;
+}
+.price-detail {
+  margin: 0 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #d1d7d7;
+}
+
+.price-detail li {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  color: #2e3333;
+}
+
+.total-price {
+  margin: 0 10px;
+  padding: 20.9px 0px;
+  font-size: 19.2px;
+  font-weight: bold;
+  color: #2e3333;
+  display: flex;
+  justify-content: space-between;
 }
